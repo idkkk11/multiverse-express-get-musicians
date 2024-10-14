@@ -12,11 +12,8 @@ const {seedMusician} = require("./seedData");
 
 describe('./musicians endpoint', () => {
     // Write your tests here
-    
-    
-
-
-
-
-    
+    it('returns a 200 status code', async() => {
+        const response = await request(app).get("/musicians")
+        expect(response.statusCode).toBe(200);
+    }) 
 })
